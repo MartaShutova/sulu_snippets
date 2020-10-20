@@ -1,0 +1,6 @@
+flo.conversion_elements:
+    class: ContentBundle\Twig\Extension\ConversionElements
+    public: true
+    tags:
+      - { name: twig.extension }
+    arguments: ['@service_container']
