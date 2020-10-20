@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>banner</key>
+
+    <meta>
+        <title lang="en">Pop Up Banner</title>
+        <title lang="de">Pop Up Banner</title>
+    </meta>
+
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                        <title lang="de">Title</title>
+                    </meta>
+
+                    <tag name="sulu.node.name"/>
+                </property>
+            </properties>
+        </section>
+        <section name="content">
+            <meta>
+                <title lang="de">Banner Appearance</title>
+                <title lang="en">Banner Appearance</title>
+            </meta>
+
+            <properties>
+                <property name="on" type="checkbox">
+                    <meta>
+                        <title lang="en">Turn On</title>
+                    </meta>
+                    <params>
+                        <param name="type" value="toggler"/>
+                    </params>
+                </property>
+
+                <property name="bannerImage" type="media_selection">
+                    <meta>
+                        <title lang="en">Pop-up Image. Please insert image with sizes: 560x800(width x height) or the same aspect ratio(to prevent slow page loading)</title>
+                        <title lang="de">Pop-up Image. Please insert image with sizes: 560x800(width x height) or the same aspect ratio(to prevent slow page loading)</title>
+                    </meta>
+
+                    <params>
+                        <param name="type" value="image"/>
+                    </params>
+                </property>
+
+                <property name="bannerUrl" type="url">
+                    <meta>
+                        <title lang="en">Banner URL</title>
+                    </meta>
+                </property>
+
+                <property name="bannerDelay" type="text_line">
+                    <meta>
+                        <title lang="en">Pop-up appearing delay, s (example: 5). Default delay: 7s</title>
+                        <title lang="de">Pop-up appearing delay, s (example: 5). Default delay: 7s</title>
+                    </meta>
+                </property>
+
+                <!-- <property name="bannerText" type="text_line">
+                    <meta>
+                        <title lang="en">Banner text</title>
+                    </meta>
+                </property> -->
+
+            </properties>
+        </section>
+
+        <section name="bannerLocation">
+            <meta>
+                <title lang="en">Banner Location</title>
+            </meta>
+            <properties>
+
+                <property name="tags" type="tag_list">
+                    <meta>
+                        <title lang="en">Tags</title>
+                    </meta>
+                </property>
+
+                <property name="keyword" type="text_line">
+                    <meta>
+                        <title lang="en">Keywords (separate by space)</title>
+                    </meta>
+                </property>
+
+                <property name="includePages" type="internal_links">
+                    <meta>
+                        <title lang="en">Include Pages Url</title>
+                    </meta>
+
+                    <params>
+                        <param name="properties" type="collection">
+                            <param name="title" value="title"/>
+                            <param name="article" value="article"/>
+                        </param>
+                    </params>
+                </property>
+                <property name="excludePages" type="internal_links">
+                    <meta>
+                        <title lang="en">Exclude Pages Url</title>
+                    </meta>
+
+                    <params>
+                        <param name="properties" type="collection">
+                            <param name="title" value="title"/>
+                            <param name="article" value="article"/>
+                        </param>
+                    </params>
+                </property>
+                <property name="articles" type="article_selection">
+                    <meta>
+                        <title lang="en">Articles</title>
+                        <title lang="de">Artikel</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+
+
+    </properties>
+</template>
