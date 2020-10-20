@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>button</key>
+
+    <meta>
+        <title lang="en">Button</title>
+        <title lang="de">Button</title>
+    </meta>
+
+
+    <properties>
+        <section name="highlight">
+            <properties>
+                <property name="title" type="text_line" mandatory="true">
+                    <meta>
+                        <title lang="en">Title</title>
+                        <title lang="de">Title</title>
+                    </meta>
+
+                    <tag name="sulu.node.name"/>
+                </property>
+            </properties>
+        </section>
+
+        <section name="content">
+            <meta>
+                <title lang="de">Button Appearance</title>
+                <title lang="en">Button Appearance</title>
+            </meta>
+
+            <properties>
+                <property name="on" type="checkbox">
+                    <meta>
+                        <title lang="en">Turn On</title>
+                    </meta>
+                    <params>
+                        <param name="type" value="toggler"/>
+                    </params>
+                </property>
+
+                <!-- <property name="buttonBackgroundImg" type="media_selection">
+                    <meta>
+                        <title lang="en">Background Upload Image</title>
+                    </meta>
+                    <params>
+                        <param name="type" value="image"/>
+                    </params>
+                </property> -->
+
+                <property name="buttonBackgroundColor" type="color">
+                    <meta>
+                        <title lang="en">Theme color picker</title>
+                    </meta>
+                </property>
+
+                <property name="icon" type="checkbox">
+                    <meta>
+                        <title lang="en">Button play icon</title>
+                    </meta>
+                    <params>
+                        <param name="type" value="toggler"/>
+                    </params>
+                </property>
+
+                <property name="buttonText" type="text_line">
+                    <meta>
+                        <title lang="en">Button text</title>
+                    </meta>
+                </property>
+
+                <property name="buttonUrl" type="url">
+                    <meta>
+                        <title lang="en">Button URL</title>
+                    </meta>
+                </property>
+
+            </properties>
+        </section>
+
+        <section name="buttonLocation">
+            <meta>
+                <title lang="en">Button Location</title>
+            </meta>
+            <properties>
+
+                <property name="tags" type="tag_list">
+                    <meta>
+                        <title lang="en">Tags</title>
+                    </meta>
+                </property>
+
+                <property name="keyword" type="text_line">
+                    <meta>
+                        <title lang="en">Keywords (separate by space)</title>
+                    </meta>
+                </property>
+
+                <property name="includePages" type="internal_links">
+                    <meta>
+                        <title lang="en">Include Pages Url</title>
+                    </meta>
+
+                    <params>
+                        <param name="properties" type="collection">
+                            <param name="title" value="title"/>
+                            <param name="article" value="article"/>
+                        </param>
+                    </params>
+                </property>
+                <property name="excludePages" type="internal_links">
+                    <meta>
+                        <title lang="en">Exclude Pages Url</title>
+                    </meta>
+
+                    <params>
+                        <param name="properties" type="collection">
+                            <param name="title" value="title"/>
+                            <param name="article" value="article"/>
+                        </param>
+                    </params>
+                </property>
+            </properties>
+        </section>
+    </properties>
+</template>
